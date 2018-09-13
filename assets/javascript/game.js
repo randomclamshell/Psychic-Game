@@ -17,7 +17,7 @@ var guesses
 var gameScore = 0;
 var losses = 0;
 var wins = 0;
-var guesses = 0;
+var guesses = 10;
 
 
 //print letter typed
@@ -33,18 +33,34 @@ function resetGame() {
   var gameScore = 0;
 var losses = 0;
 var wins = 0;
-var guesses = 0;
+var guesses = 10;
 }
 
 //print the score to the page
 printScore(gameScore, losses, wins, guesses);
-
+print(keyPressed);
 
 //what is going to happen onkeyup
-document.onkeyup = function(event)
-
+document.onkeyup = function(event) {}
 
 //get the value of the key that's pressed
+var keyPressed = event.key;
 
+// variable statements
+if (keyPressed !== letters) {
 
+  losses++;
+  guesses --;
+}
+
+if (keyPressed === letters) {
+
+  wins++;
+  guesses --;
+}
+
+if (guesses === 0) {
+  messageHTML.textContent = "Out of guesses! :("
+}
 //stop everything from running at game over
+return false;
