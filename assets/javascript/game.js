@@ -25,11 +25,11 @@ var displayHTML = document.getElementById("display");
 
 //reset the game
 function resetGame() {
-  console.log("i am in reset game")
+  console.log("resetGame")
   gameScore = 0;
   losses = 0;
   wins = 0;
-  guesses = 11;
+  guesses = 10;
   computerGuess = letters[Math.floor(letters.length * Math.random())];
   console.log("computers Guess:"+computerGuess)
 }
@@ -46,6 +46,7 @@ document.onkeyup = function (event) {
   if (keyPressed !== computerGuess) {
 
     losses++;
+
     console.log(losses)
     document.getElementById("loss").innerHTML = "Losses: " + losses;
 
@@ -57,6 +58,7 @@ document.onkeyup = function (event) {
   if (keyPressed === computerGuess) {
 
     wins++;
+    guesses--
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     resetGame()
   }
