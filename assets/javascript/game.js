@@ -13,7 +13,7 @@ var wins = 0;
 var guesses = 10;
 var computerGuess = letters[Math.floor(letters.length * Math.random())];
 
-console.log("computers Guess:"+computerGuess)
+console.log("computers Guess:" + computerGuess)
 
 
 //print letter typed
@@ -31,7 +31,7 @@ function resetGame() {
   wins = 0;
   guesses = 10;
   computerGuess = letters[Math.floor(letters.length * Math.random())];
-  console.log("computers Guess:"+computerGuess)
+  console.log("computers Guess:" + computerGuess)
 }
 
 //print the score to the page
@@ -42,6 +42,7 @@ document.onkeyup = function (event) {
   //get the value of the key that's pressed
   var keyPressed = event.key;
   console.log(keyPressed)
+
   // variable statements
   if (keyPressed !== computerGuess) {
 
