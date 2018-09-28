@@ -1,0 +1,17 @@
+
+#display {
+
+  border: 2px solid black;
+  font-family: 'Chakra Petch', sans-serif;
+  align-content: center;
+};
+
+#jumbotron {
+
+  border: 10px solid red;
+}
+
+.top {
+  background: gray;
+  color: azure
+}

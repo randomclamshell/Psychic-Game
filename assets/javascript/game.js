@@ -17,7 +17,9 @@ console.log("computers Guess:" + computerGuess)
 
 
 //print letter typed
-
+var guessesLeftHTML = document.getElementById("guesses");
+guessesLeftHTML.textContent = "Guesses Left:" + guesses;
+// document.write(guessesLeft);
 
 //variables to hold html elements/the text that stays on the screen
 var displayHTML = document.getElementById("display");
@@ -31,10 +33,9 @@ function resetGame() {
   wins = 0;
   guesses = 10;
   computerGuess = letters[Math.floor(letters.length * Math.random())];
+  guessesLeftHTML.textContent = "Guesses Left:" + guesses;
   console.log("computers Guess:" + computerGuess)
-}
-
-//print the score to the page
+};
 
 //what is going to happen onkeyup
 document.onkeyup = function (event) {
@@ -44,32 +45,33 @@ document.onkeyup = function (event) {
   console.log(keyPressed)
 
   // variable statements
+  //check if incorrect
   if (keyPressed !== computerGuess) {
-
-    losses++;
-
-    console.log(losses)
-    document.getElementById("loss").innerHTML = "Losses: " + losses;
 
     guesses--;
     console.log(guesses)
-    document.getElementById("guesses").innerHTML = "Guesses Left: " + guesses;
+    guessesLeftHTML.textContent = "Guesses Left:" + guesses;
+
+    //check if we have guesses left
+    if (guesses === 0) {
+
+      losses++;
+
+      console.log(losses)
+      document.getElementById("loss").innerHTML = "Losses: " + losses;
+      resetGame();
+
+    };
   }
 
   if (keyPressed === computerGuess) {
 
     wins++;
-    guesses--
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     resetGame()
   }
 
-  if (guesses === 0) {
 
-
-    alert("Out of guesses! :(");
-    resetGame();
-  }
 
 
   //stop everything from running at game over

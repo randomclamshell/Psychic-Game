@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>What letter?</title>
 </head>
+
 <body>
+
+  <div class="top">
+    <h1>
+      Letter Guess Game!
+    </h1>
+  </div>
+
   <div id="display">
-<h1>
-  Letter Guess Game!
-</h1>
-<p>guess the letter and you score a point. 10 wrong and you lose. Good luck!</p>
 
-<div id="letter-typed">
-</div>
+    <h2>Rules</h2>
+    <br>
+    <p>Honestly it's simple. You get 10 tries. Guess the correct letter.</p>
+    <sub>If you do get stuck, head to the console to see the answer. Cheater.</sub>
 
-<p>
-  <ul id= "loss">losses:</ul>
-    <ul id= "wins">Wins :</ul>
-    <ul id= "guesses">Guesses Left:</ul>
+    <p>
+      <ul id="loss">losses:</ul>
+      <ul id="wins">Wins:</ul>
+      <ul id="guesses">Guesses Left:</ul>
 
   </div>
 
 
   <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
