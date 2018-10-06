@@ -29,8 +29,8 @@ var displayHTML = document.getElementById("display");
 function resetGame() {
   console.log("resetGame")
   gameScore = 0;
-  losses = 0;
-  wins = 0;
+  // losses = 0;
+  // wins = 0;
   guesses = 10;
   computerGuess = letters[Math.floor(letters.length * Math.random())];
   guessesLeftHTML.textContent = "Guesses Left:" + guesses;
@@ -50,7 +50,7 @@ document.onkeyup = function (event) {
 
     guesses--;
     console.log(guesses)
-    guessesLeftHTML.textContent = "Guesses Left:" + guesses;
+    guessesLeftHTML.textContent = "Guesses Left: " + guesses;
 
     //check if we have guesses left
     if (guesses === 0) {

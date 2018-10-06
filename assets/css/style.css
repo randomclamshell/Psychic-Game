@@ -1,9 +1,11 @@
 
 #display {
+background: url("https://images.pexels.com/photos/944743/pexels-photo-944743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 
-  border: 2px solid black;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Mali', cursive;
   align-content: center;
+  margin-top: 5px;
+  padding: 5px;
 };
 
 #jumbotron {
@@ -12,6 +14,8 @@
 }
 
 .top {
-  background: gray;
-  color: azure
+
+  color: black;
+  font-family: 'K2D', cursive;
+  padding: 5px;
 }
