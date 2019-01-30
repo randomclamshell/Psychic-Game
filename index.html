@@ -7,36 +7,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=K2D|Mali" rel="stylesheet">
-  <!-- <img src="" -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Guess the Letter!</title>
+  <title>Guess the Letter</title>
 </head>
 
 <body>
 
-  <div class="top">
-    <h1>
-      Letter Guess Game!
-    </h1>
+
+  <div class="heading animated fadeInDown delay-1s">
+
+    <h1>Welcome to the Psychic Letter Game!</h1>
+    <h2 style="font-size: 20px;">Made by <a href="https://github.com/randomclamshell">Khalid Iqbal</a></h2>
   </div>
 
-  <div class="floatyThing">
+  <div class="spacer"></div>
 
-    <div id="display">
 
-      <h3>Rules</h3>
-      <br>
-      <p>Honestly it's simple. You get 10 tries. Guess the correct letter.</p>
-      <sub>If you do get stuck, head to the console to see the answer. Cheater.</sub>
 
-      <p>
-        <ul id="loss">losses:</ul>
-        <ul id="wins">Wins:</ul>
-        <ul id="guesses">Guesses Left:</ul>
 
+  <div class="row justify-content-around">
+
+    <div class="col animated bounceInUp delay-2s" id="rules">
+      <h2>Rules</h2>
+      <p>To play: you get 10 tries to guess the letter the computer is thinking.</p>
+      <p>If you guess correctly, congrats you might be psychic!</p>
+      <p>If not, then you might want to cross "psychic" off your potential careers list ;)</p>
     </div>
+ 
+  <div class="col animated bounceInUp delay-3s" id="stats">
+    <h2>Stats</h2>
+    <ul id="loss">losses:</ul>
+    <ul id="wins">Wins:</ul>
+    <ul id="guesses">Guesses Left:</ul>
   </div>
-
+</div>
   <script src="assets/javascript/game.js"></script>
 </body>
 

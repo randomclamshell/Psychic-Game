@@ -1,21 +1,44 @@
-
-#display {
-background: url("https://images.pexels.com/photos/944743/pexels-photo-944743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-
-  font-family: 'Mali', cursive;
-  align-content: center;
-  margin-top: 5px;
-  padding: 5px;
-};
-
-#jumbotron {
-
-  border: 10px solid red;
+@import url('https://fonts.googleapis.com/css?family=Abel|Bowlby+One+SC');
+body {
+  padding: 15px;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
-.top {
-
+h1 {
+  font-size: 80px;
+  font-family: 'Bowlby One SC', cursive;
   color: black;
-  font-family: 'K2D', cursive;
-  padding: 5px;
 }
+h2 {
+  font-size: 50px;
+  font-family: 'Bowlby One SC', cursive;
+}
+
+p, ul {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Abel', cursive;
+}
+
+.spacer {
+  height: 50px;
+}
+.heading {
+  font-size: 100px;
+  display: flex;
+  text-align: center;
+  font-weight: 900;
+  padding: 10px;
+}
+
+
+#rules {
+padding: 10px;
+text-align: left;
+}
+
+#stats {
+  text-align: left;
+}
+
